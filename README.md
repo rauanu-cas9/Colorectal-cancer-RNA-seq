@@ -1,2 +1,3 @@
-# Colorectal-cancer-RNA-seq-
-Paired RNA seq analysis of colorectal cancer (GSE50760), done from raw FASTQ files to pathways: QC, Salmon quantification, DESeq2 with a paired design and GO/GSEA
+This project takes public RNA-seq data from colorectal cancer patients (GSE50760: normal colon, primary tumour and liver metastasis from the same person) and runs it through the full pipeline, starting from raw FASTQ files
+Reads are trimmed with fastp, checked with FastQC/MultiQC, and quantified with Salmon against GENCODE v46. Gene-level counts go into DESeq2 (pydeseq2) with the design patient + tissue, so differences between individuals dont mask the tissue effect. Results are checked with PCA, a panel of known CRC markers, and pathway analysis (Enrichr GO, GSEA on Hallmark sets)
+The run uses 6 of 18 patients and 2M read pairs per sample to fit a free Colab session, so it demonstrates the workflow rather than new biology. The whole thing runs in about an hour in Colab
