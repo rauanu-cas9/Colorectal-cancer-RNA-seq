@@ -4,6 +4,11 @@ I did this one from raw FASTQ files and not from a ready count table, because I 
 
 [Open in Colab](https://colab.research.google.com/github/rauanu-cas9/Colorectal-cancer-RNA-seq-/blob/main/crc_rnaseq_from_fastq.ipynb)
 
+## Files
+
+- [crc_rnaseq_from_fastq.ipynb](crc_rnaseq_from_fastq.ipynb): the full analysis, FASTQ to figures
+- [crc_rnaseq_report.pdf](crc_rnaseq_report.pdf): two page summary of the results
+
 ## Question
 
 What is different between colorectal tumour and normal colon tissue from the same patient? And how does a liver metastasis differ from the primary tumour?
@@ -32,11 +37,6 @@ What is different between colorectal tumour and normal colon tissue from the sam
 ## Limits
 
 Only 6 of 18 patients and 2M read pairs per sample, so small effects and weakly expressed genes can be missed. The Salmon index has no decoys, and I summed NumReads per gene without a length correction like tximport does. Tumour samples contain stroma and immune cells, and I did not deconvolve them. So this shows the workflow and its sanity checks, not new biology.
-
-## Files
-
-- [crc_rnaseq_from_fastq.ipynb](crc_rnaseq_from_fastq.ipynb): the full analysis, FASTQ to figures
-- [crc_rnaseq_report.pdf](crc_rnaseq_report.pdf): two page summary of the results
 
 ## License
 
