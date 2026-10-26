@@ -29,12 +29,6 @@ What is different between colorectal tumour and normal colon tissue from the sam
 - Up in tumour: E2F and MYC targets, G2-M checkpoint. Down: inflammatory response, oxidative phosphorylation, fatty acid metabolism.
 - Metastasis vs primary: 215 genes, mostly liver genes (FGA, FGB, ALB, HP and others). Most likely this is host liver tissue in the sample and not something the tumour cells do.
 
-<!-- add figures here, for example: 
-
-![Volcano plot](results/volcano.png)
-
- -->
-
 ## Limits
 
 Only 6 of 18 patients and 2M read pairs per sample, so small effects and weakly expressed genes can be missed. The Salmon index has no decoys, and I summed NumReads per gene without a length correction like tximport does. Tumour samples contain stroma and immune cells, and I did not deconvolve them. So this shows the workflow and its sanity checks, not new biology.
@@ -43,7 +37,6 @@ Only 6 of 18 patients and 2M read pairs per sample, so small effects and weakly 
 
 - [crc_rnaseq_from_fastq.ipynb](crc_rnaseq_from_fastq.ipynb): the full analysis, FASTQ to figures
 - [crc_rnaseq_report.pdf](crc_rnaseq_report.pdf): two page summary of the results
-- [results/](results/): differential expression tables, normalised counts, sample sheet, MultiQC report
 
 ## License
 
